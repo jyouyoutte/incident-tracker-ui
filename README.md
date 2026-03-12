@@ -58,3 +58,40 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
+
+## Structure of the project
+src
+ └── app
+      ├── core
+      │     ├── services
+      │     │      incident.service.ts
+      │     └── interceptors
+      │
+      ├── shared
+      │     ├── models
+      │     │      incident.ts
+      │     └── components
+      │
+      ├── features
+      │     └── incidents
+      │            incidents.component.ts
+      │            incidents.component.html
+      │            incidents.component.css
+      │
+      ├── app.routes.ts
+      └── app.component.ts
+
+## Organization
+Core: Global services and HTTP interceptors
+Shared: Reusable components and templates
+Features: Isolated business functionalities
+Routing: Defined in app.routes.ts
+Root component: app.component.ts
+
+
+
+## Features
+✅ Incident Listing – Paginated view of all reported incidents.
+
+TODO : Incident Details – Deep-dive view for specific incident information.
+
