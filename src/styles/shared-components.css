@@ -1,0 +1,76 @@
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.incident-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.incident-table thead {
+  background-color: #3f51b5; /* couleur Material */
+  color: white;
+}
+
+.incident-table th,
+.incident-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.incident-table th {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.incident-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.incident-table tbody tr:hover {
+  background-color: #f5f7ff;
+}
+
+/* Statuts stylés */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Couleurs dynamiques */
+.status.open {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status.closed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.critical {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}

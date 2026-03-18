@@ -1,1 +1,30 @@
-<p>incidents works!</p>
+<h2 class="title">Incidents</h2>
+
+<div class="table-container">
+  <table class="incident-table mat-elevation-z4">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (incident of incidents(); track incident.id) {
+        <tr>
+          <td>{{ incident.id }}</td>
+          <td>{{ incident.title }}</td>
+          <td>
+            <span class="status" [ngClass]="incident.status.toLowerCase()">
+              {{ incident.status }}
+            </span>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="3" class="empty">Aucun incident trouvé.</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
